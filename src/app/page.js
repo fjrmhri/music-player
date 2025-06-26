@@ -19,7 +19,7 @@ export default function Home() {
   const [showOverlay, setShowOverlay] = useState(false);
   const [volume, setVolume] = useState(1);
   const [overlaySpeed, setOverlaySpeed] = useState(1);
-  const [brightness, setBrightness] = useState(1); // Tambahkan state brightness
+  const [brightness, setBrightness] = useState(1);
 
   return (
     <div className="relative min-h-screen flex flex-col justify-end items-center overflow-hidden">
@@ -43,6 +43,10 @@ export default function Home() {
         brightness={brightness}
         setBrightness={setBrightness}
       />
+           {}
+      <footer className="text-white text-xs mt-2 mb-4 opacity-60 z-20">
+        &copy; {new Date().getFullYear()} fjrmhri
+      </footer>
     </div>
   );
 }
