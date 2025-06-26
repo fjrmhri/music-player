@@ -80,13 +80,13 @@ export default function MusicPlayer({
         volume={volume}
       />
 
-      {/* Song Info */}
+      {}
       <div className="flex flex-col mr-4">
         <span className="font-semibold">{songs[current].title}</span>
         <span className="text-xs text-gray-300">{songs[current].artist}</span>
       </div>
 
-      {/* Control Buttons */}
+      {}
       <button className="p-2 hover:bg-white/10 rounded-full" onClick={prev} aria-label="Previous">
         <svg width="24" height="24" fill="none">
           <path d="M15 18V6M6 12l9-6v12l-9-6z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -116,7 +116,7 @@ export default function MusicPlayer({
         </svg>
       </button>
 
-      {/* Wallpaper Button */}
+      {}
       <button
         className="p-2 hover:bg-white/10 rounded-full"
         onClick={nextWallpaper}
@@ -130,7 +130,7 @@ export default function MusicPlayer({
         </svg>
       </button>
 
-      {/* Volume Slider */}
+      {}
       <input
         type="range"
         min={0}
@@ -143,7 +143,7 @@ export default function MusicPlayer({
         aria-label="Volume"
       />
 
-      {/* Overlay Speed */}
+      {}
       <button
         className="p-2 hover:bg-white/10 rounded-full flex items-center"
         onClick={handleOverlaySpeed}
@@ -158,7 +158,7 @@ export default function MusicPlayer({
         <span className="ml-1 text-xs">{overlaySpeed}x</span>
       </button>
 
-      {/* Brightness Slider */}
+      {}
       <div className="flex items-center gap-2 ml-2">
         <button
           className="p-2 hover:bg-white/10 rounded-full"
