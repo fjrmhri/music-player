@@ -59,7 +59,7 @@ export default function MusicPlayer({
   };
 
   const handleOverlaySpeed = () => {
-    const speeds = [0.5, 1, 1.5, 2];
+    const speeds = [1, 1.5, 2];
     const idx = speeds.indexOf(overlaySpeed);
     setOverlaySpeed(speeds[(idx + 1) % speeds.length]);
   };
