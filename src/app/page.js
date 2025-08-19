@@ -48,6 +48,7 @@ export default function Page() {
           sceneIdx={sceneIdx}
           setSceneIdx={setSceneIdx}
           opacity={1}
+          brightness={brightness}
         />
       )}
 

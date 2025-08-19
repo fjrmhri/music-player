@@ -61,7 +61,7 @@ export default function MusicPlayer({
   const toggleOverlay = () => {
     if (!showOverlay) {
       setShowOverlay(true);
-      setSceneIdx(0); // mulai dari day
+      setSceneIdx(0);
     } else {
       setSceneIdx((i) => (i + 1) % sceneVariants.length);
     }
@@ -100,16 +100,18 @@ export default function MusicPlayer({
 
   return (
     <div
-      className=" fixed left-1/2 -translate-x-1/2 bottom-4
+      className="
+    fixed left-1/2 -translate-x-1/2 bottom-2 md:bottom-3
     flex flex-col md:flex-row items-center md:items-center
-    gap-4 md:gap-6
-    w-[95%] sm:w-[90%] md:w-auto md:min-w-[380px]
-    px-5 py-4 md:px-6
+    gap-2.5 md:gap-4
+    w-[95%] sm:w-[90%] md:w-auto md:min-w-[320px]
+    px-3 py-2.5 md:px-5 md:py-3
     bg-gradient-to-br from-black/70 via-black/50 to-black/30
     backdrop-blur-xl text-white
-    rounded-2xl shadow-2xl border border-white/10
+    rounded-xl shadow-xl border border-white/10
     transition-all duration-300 ease-in-out
-    z-20"
+    z-20
+  "
     >
       <audio
         ref={audioRef}
@@ -121,29 +123,33 @@ export default function MusicPlayer({
       />
 
       {/* Info lagu */}
-      <div className="text-center md:text-left w-full md:w-auto]">
-        <span className="font-semibold block">{songs[current].title}</span>
-        <span className="text-xs text-gray-300">{songs[current].artist}</span>
+      <div className="text-center md:text-left w-full md:w-auto md:min-w-[120px]">
+        <span className="block font-semibold text-xs md:text-sm leading-tight">
+          {songs[current].title}
+        </span>
+        <span className="block text-[11px] text-gray-300">
+          {songs[current].artist}
+        </span>
       </div>
 
       {/* Kontrol musik */}
-      <div className="flex justify-center items-center gap-4 w-full md:w-auto">
-        <button className="p-2 hover:bg-white/10 rounded-full" onClick={prev}>
-          <SkipBack size={20} />
+      <div className="flex justify-center items-center gap-2.5 md:gap-3 w-full md:w-auto">
+        <button className="p-1.5 hover:bg-white/10 rounded-full" onClick={prev}>
+          <SkipBack size={18} />
         </button>
         <button
-          className="p-2 hover:bg-white/10 rounded-full"
+          className="p-2 bg-white/20 rounded-full hover:bg-white/30 transition"
           onClick={playing ? pause : play}
         >
-          {playing ? <Pause size={20} /> : <Play size={20} />}
+          {playing ? <Pause size={18} /> : <Play size={18} />}
         </button>
-        <button className="p-2 hover:bg-white/10 rounded-full" onClick={next}>
-          <SkipForward size={20} />
+        <button className="p-1.5 hover:bg-white/10 rounded-full" onClick={next}>
+          <SkipForward size={18} />
         </button>
       </div>
 
-      {/* Volume */}
-      <div className="flex justify-center items-center gap-4 w-full md:w-auto">
+      {/* Volume + Wallpaper + Brightness */}
+      <div className="flex justify-center items-center gap-2.5 md:gap-3 w-full md:w-auto">
         <input
           type="range"
           min={0}
@@ -151,23 +157,19 @@ export default function MusicPlayer({
           step={0.01}
           value={volume}
           onChange={(e) => setVolume(Number(e.target.value))}
-          className="mx-2 accent-white"
-          style={{ width: 80 }}
-          aria-label="Volume"
+          className="accent-white w-20 md:w-24"
         />
 
-        {/* Tombol ganti wallpaper */}
         <button
-          className="p-2 hover:bg-white/10 rounded-full"
+          className="p-1.5 hover:bg-white/10 rounded-full"
           onClick={changeWallpaper}
           title="Ganti Wallpaper"
         >
-          <ImageIcon size={20} />
+          <ImageIcon size={18} />
         </button>
 
-        {/* Brightness */}
-        <div className="flex items-center gap-2">
-          <Sun size={18} />
+        <div className="flex items-center gap-1.5">
+          <Sun size={14} className="text-gray-300" />
           <input
             type="range"
             min={0.5}
@@ -175,18 +177,16 @@ export default function MusicPlayer({
             step={0.01}
             value={brightness}
             onChange={(e) => setBrightness(Number(e.target.value))}
-            className="accent-white w-20"
-            style={{ width: 70 }}
+            className="accent-white w-16 md:w-20"
           />
         </div>
       </div>
 
       {/* Tombol overlay toggle */}
-      <div className="flex justify-center gap-2 w-full md:w-auto">
-        {/* Biasa */}
+      <div className="flex justify-center gap-1.5 w-full md:w-auto">
         <button
           onClick={() => setShowOverlay(false)}
-          className={`p-2 rounded-full transition ${
+          className={`p-1.5 rounded-full transition ${
             !showOverlay
               ? "bg-white/30 text-black"
               : "bg-white/10 hover:bg-white/20 text-white"
@@ -196,7 +196,6 @@ export default function MusicPlayer({
           {sceneIcons.default}
         </button>
 
-        {/* Scenes */}
         {sceneVariants.map((scene, i) => {
           const label = scene.replace(".mp4", "");
           return (
@@ -206,7 +205,7 @@ export default function MusicPlayer({
                 setShowOverlay(true);
                 setSceneIdx(i);
               }}
-              className={`p-2 rounded-full transition ${
+              className={`p-1.5 rounded-full transition ${
                 showOverlay && sceneIdx === i
                   ? "bg-white/30 text-black"
                   : "bg-white/10 hover:bg-white/20 text-white"

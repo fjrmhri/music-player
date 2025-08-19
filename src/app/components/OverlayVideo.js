@@ -14,6 +14,7 @@ export default function OverlayVideo({
   setSceneIdx,
   muted = true,
   opacity = 0.5,
+  brightness = 1,
 }) {
   const videoRef = useRef(null);
   const [fadeIn, setFadeIn] = useState(false);
@@ -51,7 +52,11 @@ export default function OverlayVideo({
         loop
         muted={muted}
         playsInline
-        style={{ background: "transparent", opacity }}
+        style={{
+          background: "transparent",
+          opacity,
+          filter: `brightness(${brightness})`,
+        }}
         onLoadedData={() => setFadeIn(true)}
       />
     </div>
