@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import MusicPlayer from "./components/MusicPlayer";
-import OverlayVideo, { sceneVariants } from "./components/OverlayVideo";
-import Wallpaper from "./components/Wallpaper";
+import MusicPlayer from "./components/Music/MusicPlayer";
+import OverlayVideo, { sceneVariants } from "./components/Music/OverlayVideo";
+import Wallpaper from "./components/Music/Wallpaper";
 
 const wallpapers = [
   "/thumbnails/chill-vibes.png",
