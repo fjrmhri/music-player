@@ -48,10 +48,12 @@ yarn install
 pnpm install
 # atau
 bun install
-2️⃣ Jalankan Server Pengembangan
-bash
-Salin
-Edit
+
+```
+
+### 2️⃣ Jalankan Server Pengembangan
+
+```bash
 npm run dev
 # atau
 yarn dev
@@ -59,20 +61,23 @@ yarn dev
 pnpm dev
 # atau
 bun dev
+
+```
+
 3️⃣ Buka di Browser
 Akses aplikasi di: 👉 http://localhost:3000
 
 File utama untuk mulai eksplorasi: app/page.js
 Setiap perubahan tersimpan akan otomatis merefresh browser. 🔄
 
-📂 Sumber Resource
-🎶 Musik & ambience dari repo:
-👉 ItzAshOffcl/lofi-resources
+## 📂 Sumber Resource
 
-📖 Pelajari Lebih Lanjut
-📚 Next.js Documentation – Fitur & API lengkap
+🎶 Musik & ambience dari repo:  
+👉 [ItzAshOffcl/lofi-resources](https://github.com/ItzAshOffcl/lofi-resources)
 
-🧑‍💻 Learn Next.js – Tutorial interaktif resmi
+## 📖 Pelajari Lebih Lanjut
+
+[![Next.js Docs](https://img.shields.io/badge/Docs-Next.js-black?style=for-the-badge&logo=next.js)](https://nextjs.org/docs)  
+[![Learn Next.js](https://img.shields.io/badge/Learn-Next.js-blue?style=for-the-badge&logo=vercel)](https://nextjs.org/learn)
 
 ✨ Nikmati vibes lofi, biarkan musik menemani aktivitasmu 🎶☕🌙
-```
