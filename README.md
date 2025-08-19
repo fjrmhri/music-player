@@ -64,7 +64,8 @@ bun dev
 
 ```
 
-3️⃣ Buka di Browser
+### 3️⃣ Buka di Browser
+
 Akses aplikasi di: 👉 http://localhost:3000
 
 File utama untuk mulai eksplorasi: app/page.js
@@ -77,7 +78,7 @@ Setiap perubahan tersimpan akan otomatis merefresh browser. 🔄
 
 ## 📖 Pelajari Lebih Lanjut
 
-[![Next.js Docs](https://img.shields.io/badge/Docs-Next.js-black?style=for-the-badge&logo=next.js)](https://nextjs.org/docs)  
-[![Learn Next.js](https://img.shields.io/badge/Learn-Next.js-blue?style=for-the-badge&logo=vercel)](https://nextjs.org/learn)
+- 📚 [Next.js Documentation](https://nextjs.org/docs) – Fitur & API lengkap
+- 🧑‍💻 [Learn Next.js](https://nextjs.org/learn) – Tutorial interaktif resmi
 
 ✨ Nikmati vibes lofi, biarkan musik menemani aktivitasmu 🎶☕🌙
