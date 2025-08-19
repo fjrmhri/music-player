@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://img.shields.io/github/stars/USERNAME/REPO?style=for-the-badge&logo=github&color=8b5cf6" alt="Stars"/>
-  <img src="https://img.shields.io/github/license/USERNAME/REPO?style=for-the-badge&color=10b981" alt="License"/>
+  <img src="https://img.shields.io/github/stars/fjrmhri/REPO?style=for-the-badge&logo=github&color=8b5cf6" alt="Stars"/>
+  <img src="https://img.shields.io/github/license/fjrmhri/REPO?style=for-the-badge&color=10b981" alt="License"/>
   <img src="https://img.shields.io/badge/Next.js-Framework-black?style=for-the-badge&logo=next.js" alt="Next.js"/>
   <img src="https://img.shields.io/badge/TailwindCSS-Styling-38bdf8?style=for-the-badge&logo=tailwind-css" alt="TailwindCSS"/>
 </p>
